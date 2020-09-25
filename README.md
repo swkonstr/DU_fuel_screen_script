@@ -27,9 +27,9 @@ Instructions
 4. Link Programing Board to screen. Name below, it is case sensative
       - screen
 5. Enter the lua editing and create 3 filters under "Unit". Those 3 filters are the in the repository. "Live" is case sensative when you create the tick filter. 
-      - tick(Live)
-      - start()
-      - stop()
+- tick(Live)
+- start()
+- stop()
 6. Copy/paste the code from each repository file into each filter. 
 7. Apply the changes. You are done. 
 
