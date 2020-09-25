@@ -44,8 +44,9 @@ There are 3 sections of the main script tick(Live)
 
 We only neeed to edit sections 2 and 3
 
-Section 2 is broken down further with each fuel tank by --. I will use AtmoFuel1 as an example. Line 21 is where you set the fuel tank size. The variable to edit is "maxAtmoFuel1 = 1600". Small is 400, Medium is 1600, Large is 12800. If you wanted to add a 3rd atmospheric tank, you would just copy and paste lines 20-29. Every variable with "AtmoFuel1" would need to be changed to something like "AtmoFuel3". Example for Line 24 is below. You would repeat this for ever variable in that pasted section
-      massAtmoFuel3 = round(math.ceil(AtmoFuel3.getItemsMass()/weightAtmoFuel3),1)
+Section 2 is broken down further with each fuel tank. I will use AtmoFuel1 as an example. Line 21 is where you set the fuel tank size. The variable to edit is "maxAtmoFuel1 = 1600". Small is 400, Medium is 1600, Large is 12800. If you wanted to add a 3rd atmospheric tank, you would just copy and paste lines 20-29. Every variable with "AtmoFuel1" would need to be changed to something like "AtmoFuel3". Example for Line 24 is below. 
+   >massAtmoFuel3 = round(math.ceil(AtmoFuel3.getItemsMass()/weightAtmoFuel3),1)
+You would repeat this for ever variable in that pasted section
       
       
       WIP
