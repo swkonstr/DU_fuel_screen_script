@@ -1,0 +1,120 @@
+function round(number,decimals)
+    local power = 10^decimals
+    return math.floor((number/1000) * power) / power
+end 
+
+function FuelStatus(percent)
+    if percent <= 25 then return "<th style=\"color: red;\">LOW</th>"
+    elseif percent > 25 and percent < 50 then return "<th style=\"color: orange;\">LOW</th>"
+    else return "<th style=\"color: green;\">GOOD</th>"
+    end 
+end
+
+local useL = 1 --export: Use 1 for L or 0 for t
+if useL == 1 then
+    unitMeasure = "KL"
+elseif useL == 0 then
+    unitMeasure = "T"
+end
+
+--Atmo Fuel 1 Variables
+local maxAtmoFuel1 = 1600 --export: This is the maximum mass allowed in container. Update as needed
+local weightAtmoFuel1 = 4 --export:
+if useL == 1 then
+    massAtmoFuel1 = round(math.ceil(AtmoFuel1.getItemsMass()/weightAtmoFuel1),1)
+elseif useL == 0 then  
+    massAtmoFuel1 = round(math.ceil(AtmoFuel1.getItemsMass()),1)
+end
+local percentAtmoFuel1 = math.ceil(((math.ceil((AtmoFuel1.getItemsMass()/weightAtmoFuel1) - 0.5)/maxAtmoFuel1)*100))
+local statusAtmoFuel1 = FuelStatus(percentAtmoFuel1)
+
+--Atmo Fuel 2 Variables
+local maxAtmoFuel2 = 1600 --export: This is the maximum mass allowed in container. Update as needed
+local weightAtmoFuel2 = 4 --export:
+if useL == 1 then
+    massAtmoFuel2 = round(math.ceil(AtmoFuel2.getItemsMass()/weightAtmoFuel2),1)
+elseif useL == 0 then  
+    massAtmoFuel2 = round(math.ceil(AtmoFuel2.getItemsMass()),1)
+end
+local percentAtmoFuel2 = math.ceil(((math.ceil((AtmoFuel2.getItemsMass()/weightAtmoFuel2) - 0.5)/maxAtmoFuel2)*100))
+local statusAtmoFuel2 = FuelStatus(percentAtmoFuel2)
+
+--Space Fuel 1 Variables
+local maxSpaceFuel1 = 1600 --export: This is the maximum mass allowed in container. Update as needed
+local weightSpaceFuel1 = 6 --export:
+if useL == 1 then
+    massSpaceFuel1 = round(math.ceil(SpaceFuel1.getItemsMass()/weightSpaceFuel1),1)
+elseif useL == 0 then  
+    massSpaceFuel1 = round(math.ceil(SpaceFuel1.getItemsMass()),1)
+end
+local percentSpaceFuel1 = math.ceil(((math.ceil((SpaceFuel1.getItemsMass()/weightSpaceFuel1) - 0.5)/maxSpaceFuel1)*100))
+local statusSpaceFuel1 = FuelStatus(percentSpaceFuel1)
+
+--Space Fuel 2 Variables
+local maxSpaceFuel2 = 1600 --export: This is the maximum mass allowed in container. Update as needed
+local weightSpaceFuel2 = 6 --export:
+if useL == 1 then
+    massSpaceFuel2 = round(math.ceil(SpaceFuel2.getItemsMass()/weightSpaceFuel2),1)
+elseif useL == 0 then  
+    massSpaceFuel2 = round(math.ceil(SpaceFuel2.getItemsMass()),1)
+end
+local percentSpaceFuel2 = math.ceil(((math.ceil((SpaceFuel2.getItemsMass()/weightSpaceFuel2) - 0.5)/maxSpaceFuel2)*100))
+local statusSpaceFuel2 = FuelStatus(percentSpaceFuel2)
+
+html = [[
+<div class="bootstrap">
+<h1 style="
+	font-size: 8em;
+">Fuel Tank Status</h1>
+<table 
+style="
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+	font-size: 4em;
+">
+	</br>
+	<tr style="
+		width: 100%;
+		margin-bottom: 30px;
+		background-color: blue;
+		color: white;
+	">
+		<th>Tank</th>
+		<th>Qty</th>
+		<th>Levels</th>
+		<th>Status</th>
+	<tr>
+		<th>Atmo Fuel Port</th>
+		<th>]]..massAtmoFuel1..unitMeasure..[[</th>
+		<th>]]..percentAtmoFuel1..[[%</th>
+		]]..statusAtmoFuel1..[[
+	</tr>
+
+	<tr>
+		<th>Atmo Fuel Star</th>
+		<th>]]..massAtmoFuel2..unitMeasure..[[</th>
+		<th>]]..percentAtmoFuel2..[[%</th>
+		]]..statusAtmoFuel2..[[
+	</tr>
+
+	<tr>
+		<th>Space Fuel Port</th>
+		<th>]]..massSpaceFuel1..unitMeasure..[[</th>
+		<th>]]..percentSpaceFuel1..[[%</th>
+		]]..statusSpaceFuel1..[[
+	</tr>
+
+	<tr>
+		<th>Space Fuel Star</th>
+		<th>]]..massSpaceFuel2..unitMeasure..[[</th>
+		<th>]]..percentSpaceFuel2..[[%</th>
+		]]..statusSpaceFuel2..[[
+	</tr>
+
+</table>
+</div>
+]]
+
+screen.setHTML(html)
