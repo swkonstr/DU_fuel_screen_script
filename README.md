@@ -26,7 +26,7 @@ Instructions
       * switch
 4. Link Programing Board to screen. Name below, it is case sensative
       * screen
-5. Enter the lua editing and create 3 filters under "Unit". Those 3 filters are the in the repository. "Live" is case sensative when you create the tick filter. 
+5. Enter the lua editing and create 3 filters under "Unit". Those 3 filters are in the repository. "Live" is case sensative when you create the tick filter. 
       * tick(Live)
       * start()
       * stop()
