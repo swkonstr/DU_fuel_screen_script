@@ -9,38 +9,38 @@ Credit to thespartacus29 (https://github.com/thespartacus29). This is pretty muc
 This is a instruction with script on how to set up a screen to display your fuel tank's capacity. The script in it's current form will support 2 medium Atmospheric tanks and 2 medium Space tanks. However, you can edit it to as many tanks as you want or differant sizes. We'll go over that later after install. 
 
 Items needed
-- 2 Atmospheric Fuel tanks Medium
-- 2 Space Fuel tanks Medium
-- 1 Manual Switch
-- 1 Programing Board
-- 1 Screen XS 
+* 2 Atmospheric Fuel tanks Medium
+* 2 Space Fuel tanks Medium
+* 1 Manual Switch
+* 1 Programing Board
+* 1 Screen XS 
 
 Instructions
 1. Place your items
 2. Links Tanks to Programing Board. Do one link at a time so you can name appopriatly. To name them, look at your programing board and press ctrl+L to enter the Lua editing screen. Names are below, they are case sensative. 
-      - AtomFuel1
-      - AtmoFuel2
-      - SpaceFuel1
-      - SpaceFuel2
+      * AtomFuel1
+      * AtmoFuel2
+      * SpaceFuel1
+      * SpaceFuel2
 3. Link Switch to Programing Board. Name below, it is case sensative
-      - switch
+      * switch
 4. Link Programing Board to screen. Name below, it is case sensative
-      - screen
+      * screen
 5. Enter the lua editing and create 3 filters under "Unit". Those 3 filters are the in the repository. "Live" is case sensative when you create the tick filter. 
-      - tick(Live)
-      - start()
-      - stop()
+      * tick(Live)
+      * start()
+      * stop()
 6. Copy/paste the code from each repository file into each filter. 
 7. Apply the changes. You are done. 
 
-------------------------------------------------------------------------------
+
 
 For editing to fit your ship
 
 There are 3 sections of the main script tick(Live)
-      - Section 1 are lines 1-19
-      - Section 2 are lines 20-63
-      - Section 3 are lines 64-120
+      * Section 1 are lines 1-19
+      * Section 2 are lines 20-63
+      * Section 3 are lines 64-120
 
 We only neeed to edit sections 2 and 3
 
