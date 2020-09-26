@@ -60,7 +60,7 @@ to
    
 You would repeat this for every variable in that pasted section
       
-Secction 3 need similar edits. You would copy and paste one of the tank sections, the first one would be lines 88-93. You would change every variable with *"AtmoFuel1"* to *"AtmoFuel3*". An example line is below. 
+Secction 3 needs similar edits. You would copy and paste one of the tank sections, the first one would be lines 88-93. You would change every variable with *"AtmoFuel1"* to *"AtmoFuel3*". An example line is below. 
 > <th>]]..massAtmoFuel1..unitMeasure..[[</th>
 
 to
