@@ -6,7 +6,7 @@ Never run out of gas again! Dual Universe script to display your ship's fuel tan
 
 Credit to thespartacus29 (https://github.com/thespartacus29). This is pretty much his exact code for his Ore Monitor (https://github.com/thespartacus29/DualUniverse-OreMonitor) with only a few tweeks. 
 
-This is a instruction with script on how to set up a screen to display your fuel tank's capacity. The script in it's current form will support 2 medium Atmospheric tanks and 2 medium Space tanks. However, you can edit it to as many tanks as you want or differant sizes. We'll go over that later after install. 
+This is an instruction with script on how to set up a screen to display your fuel tank's capacity. The script in it's current form will support 2 medium Atmospheric tanks and 2 medium Space tanks. However, you can edit it to as many tanks as you want or differant sizes. We'll go over that later after install. 
 
 Items needed
 * 2 Atmospheric Fuel tanks Medium
