@@ -31,11 +31,9 @@ Instructions
       * start()
       * stop()
 6. Copy/paste the code from each repository file into each filter. 
-7. Apply the changes. You are done. 
+7. Apply the changes. You are done. You can stop reading now but if you want to be able to edit the script to fit your fuel setup, keep on reading. Insructions for editing are below. 
 
-
-
-You can stop reading now but if you want to be able to edit the script to fit your fuel setup, keep on reading. Insructions for editing are below. 
+---------------------------------------------------------------------------------
 
 There are 3 sections of the main script tick(Live)
 
