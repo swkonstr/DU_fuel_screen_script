@@ -50,7 +50,7 @@ Section 2 is broken down further with each fuel tank. I will use AtmoFuel1 as an
 * Medium is 1600 
 * Large is 12800
 
-If all you needed to do was change the size, then you're done editing. If you wanted to add a 3rd atmospheric tank, you would just copy and paste lines 20-29. Every variable with *"AtmoFuel1"* would need to be changed to something like *"AtmoFuel3"*. Example is below. 
+If all you needed to do was change the size, then you're done editing. If you wanted to add a 3rd atmospheric tank, start by adding the tank, linking it and naming it appropriatly, IE "AtmoFuel3". Lines 20-29 are an entire tank section, you would copy and paste it to add a 3rd tank. Every variable with *"AtmoFuel1"* would need to be changed to something like *"AtmoFuel3"*. Example is below. 
    >massAtmoFuel1 = round(math.ceil(AtmoFuel1.getItemsMass()/weightAtmoFuel1),1)
 
 to
