@@ -35,18 +35,39 @@ Instructions
 
 
 
-For editing to fit your ship
+You can stop reading now but if you want to be able to edit the script to fit your fuel setup, keep on reading. Insructions for editing are below. 
 
 There are 3 sections of the main script tick(Live)
+
       * Section 1 are lines 1-19
       * Section 2 are lines 20-63
       * Section 3 are lines 64-120
 
-We only neeed to edit sections 2 and 3
+We only neeed to edit section 2 if you change the size of the tank. If you change the amount of tanks, you'll need to edit sections 2 and 3. 
 
-Section 2 is broken down further with each fuel tank. I will use AtmoFuel1 as an example. Line 21 is where you set the fuel tank size. The variable to edit is "maxAtmoFuel1 = 1600". Small is 400, Medium is 1600, Large is 12800. If you wanted to add a 3rd atmospheric tank, you would just copy and paste lines 20-29. Every variable with "AtmoFuel1" would need to be changed to something like "AtmoFuel3". Example for Line 24 is below. 
+Section 2 is broken down further with each fuel tank. I will use AtmoFuel1 as an example. Line 21 is where you set the fuel tank size. The variable to edit is 
+>"maxAtmoFuel1 = 1600"
+
+* Small is 400
+* Medium is 1600 
+* Large is 12800
+
+If all you needed to do was change the size, then you're done editing. If you wanted to add a 3rd atmospheric tank, you would just copy and paste lines 20-29. Every variable with *"AtmoFuel1"* would need to be changed to something like *"AtmoFuel3"*. Example is below. 
+   >massAtmoFuel1 = round(math.ceil(AtmoFuel1.getItemsMass()/weightAtmoFuel1),1)
+
+to
+
    >massAtmoFuel3 = round(math.ceil(AtmoFuel3.getItemsMass()/weightAtmoFuel3),1)
-You would repeat this for ever variable in that pasted section
+   
+   
+You would repeat this for every variable in that pasted section
       
-      
+Secction 3 need similar edits. You would copy and paste one of the tank sections, the first one would be lines 88-93. You would change every variable with *"AtmoFuel1"* to *"AtmoFuel3*". An example line is below. 
+> <th>]]..massAtmoFuel1..unitMeasure..[[</th>
+
+to
+
+> <th>]]..massAtmoFuel3..unitMeasure..[[</th>
+
+
       WIP
